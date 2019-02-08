@@ -163,7 +163,7 @@ article form {
 
 .rotate {
   position: absolute;
-  top: 50%;
+  top: 66%;
   left: 25%;
   margin: -100px 0 0 -100px;
     -webkit-transform: rotate(-90deg);
