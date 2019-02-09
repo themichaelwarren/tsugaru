@@ -5,12 +5,12 @@ body {
 }
 
 #container {
-  width: 100%;
-  margin: 50px auto;
-  padding: 20px;
+  width: auto;
+  padding: 20px 0;
 }
 
 #container h1 {
+  width: 100%;
   text-align: center;
   font-weight: 100;
   font-size: 18px;
@@ -18,9 +18,8 @@ body {
 }
 
 #quoteContainer {
-  width: 75%;
-  padding: 10px;
-  margin: 30px auto;
+  width: 100%;
+  margin: 30px 0;
   font-size: 40px;
   font-weight: black;
   text-align: center;
