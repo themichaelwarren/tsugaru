@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <!--
 
                        #                                        # #                                   
@@ -24,34 +23,81 @@ This site brought to you be Queen & Co.
 Feel free to get in touch: info@queenand.co
 
 -->
-
 <html>
 
 <head>
-  <title>ランダム 津軽弁 ジェネレーター</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
-  <link rel="stylesheet" href="/css/quote.css">
-  <script src=js/generator.js></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>津軽弁ジェネレーター</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/quote.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <div id="container">
-      <h1>ランダム <div style="display:inline;font-size:20px;font-weight:700">津軽弁</div> ジェネレーター</h1>
-    <div id="quoteContainer">
-        <table style="width:100%">
-      <p id="quote"></p>
-        </table>
+    <div id="container">
+        <h1>ランダム <div style="display:inline;font-size:20px;font-weight:700">津軽弁</div> ジェネレーター</h1>
+        <div id="quoteContainer">
+            <table style="width:100%">
+                <p id="quote"></p>
+            </table>
+        </div>
+        <div id="buttonContainer">
+            <a href="#" id="quoteButton">押さなが！</a><br>
+            <button class="tweetButton"><a href="https://twitter.com/login" target="_blank" style="color: #000; text-decoration:none"><i class='fa fa-twitter fa-2x' ></i></a></button>
+        </div>
     </div>
-    <div id="buttonContainer">
-      <a href="#" id="quoteButton">押さなが！</a><br>
-      <button class="tweetButton"><a href="https://twitter.com/login" target="_blank" style="color: #000; text-decoration:none"><i class='fa fa-twitter fa-2x' ></i></a></button>
-    </div>
-  </div>
 </body>
+<script>
+$(document).ready(function() {
+
+    function getQuote() {
+        var quotes = [{
+            quote: "こんにづは！"
+        }, {
+            quote: "どんだんだば！"
+        }, {
+            quote: "わいは！"
+        }, {
+            quote: "まんずな！"
+        }, {
+            quote: "あずましいじゃ！"
+        }, {
+            quote: "まいね、まいね！"
+        }, {
+            quote: "ぉんろ〜！"
+        }, {
+            quote: "どうしちゃば！"
+        }, {
+            quote: "なんぼめごこだば！ "
+        }, {
+            quote: "なのどんず、<br>まのどんず　"
+        }, {
+            quote: "腹チェじゃ！"
+        }, ];
+
+        var sourceLength = quotes.length;
+        var randomNumber = Math.floor(Math.random() * sourceLength);
+
+        for (var i = 0; i <= sourceLength; i++) {
+            var newQuoteText = quotes[randomNumber].quote;
+            var newQuoteName = quotes[randomNumber].name;
+        }
+
+        var timeAnimation = 200;
+        var quoteContainer = $("#quoteContainer");
+        quoteContainer.fadeOut(timeAnimation, function() {
+            quoteContainer.html('');
+            quoteContainer.append('<p>' + newQuoteText + '</p>');
+            quoteContainer.fadeIn(timeAnimation);
+        }); //end of fadeOut
+    } //end of getQuote
+    getQuote();
+
+    $("#quoteButton").click(getQuote);
+
+}); //end of document.ready
+</script>
 
 </html>
