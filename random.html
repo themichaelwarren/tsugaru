@@ -42,7 +42,9 @@ Feel free to get in touch: info@queenand.co
   <div id="container">
     <h1>ランダム 津軽弁 ジェネレーター</h1>
     <div id="quoteContainer">
+        <table style="width:100%">
       <p id="quote"></p>
+        </table>
     </div>
     <div id="buttonContainer">
       <a href="#" id="quoteButton">押さなが！</a><br>
@@ -74,7 +76,7 @@ function getQuote() {
   }, {
   quote: "なんぼめごこだば！ "
   }, {
-  quote: "なのどんず、まのどんず"
+  quote: "なのどんず、<br>まのどんず　"
   }, {
   quote: "腹チェじゃ！"
   }, ];
@@ -87,7 +89,7 @@ function getQuote() {
       var newQuoteName = quotes[randomNumber].name;
     }
     
-    var timeAnimation = 500;
+    var timeAnimation = 200;
     var quoteContainer = $("#quoteContainer");
       quoteContainer.fadeOut(timeAnimation, function() {
         quoteContainer.html('');
