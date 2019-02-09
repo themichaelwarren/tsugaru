@@ -59,7 +59,7 @@ body {
   cursor: pointer;
 }
 
-.tweetButton {
+.shareButton {
   background-color: #7EEEE4;
   width: 50px;
   margin-top: 10px;
@@ -72,7 +72,7 @@ body {
 }
 
 
-.tweetButton:before {
+.shareButton:before {
   font-family: FontAwesome;
   margin: 10px;
 }
