@@ -1,6 +1,5 @@
 body {
-  background-color: #FAB050;
-  font-family: grundschrift, sans-serif;
+  font-family: "M PLUS 1p", sans-serif;
   color: #000;
   text-align: center;
 }
@@ -13,16 +12,20 @@ body {
 
 #container h1 {
   text-align: center;
+  font-weight: 100;
+  font-size: 18px;
   color: #000;
 }
 
 #quoteContainer {
   width: 75%;
-  background: #FAB050;
   padding: 10px;
   margin: 30px auto;
+  font-size: 40px;
+  font-weight: black;
   text-align: center;
-  height: 100px;
+  vertical-align: middle;
+  height: auto;
 }
 
 #buttonContainer {
@@ -36,7 +39,7 @@ body {
   margin-top: 10px;
   border: 2px solid #000;
   border-radius: 3px;
-  color: #FAB050;
+  color: #FFF;
   font-family: inherit;
   font-weight: bold;
   padding: 5px;
