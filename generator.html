@@ -30,9 +30,10 @@ Feel free to get in touch: info@queenand.co
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/quote.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/generator.js"></script>
 </head>
 
 <body>
@@ -49,55 +50,5 @@ Feel free to get in touch: info@queenand.co
         </div>
     </div>
 </body>
-<script>
-$(document).ready(function() {
-
-    function getQuote() {
-        var quotes = [{
-            quote: "こんにづは！"
-        }, {
-            quote: "どんだんだば！"
-        }, {
-            quote: "わいは！"
-        }, {
-            quote: "まんずな！"
-        }, {
-            quote: "あずましいじゃ！"
-        }, {
-            quote: "まいね、まいね！"
-        }, {
-            quote: "ぉんろ〜！"
-        }, {
-            quote: "どうしちゃば！"
-        }, {
-            quote: "なんぼめごこだば！ "
-        }, {
-            quote: "なのどんず、<br>まのどんず　"
-        }, {
-            quote: "腹チェじゃ！"
-        }, ];
-
-        var sourceLength = quotes.length;
-        var randomNumber = Math.floor(Math.random() * sourceLength);
-
-        for (var i = 0; i <= sourceLength; i++) {
-            var newQuoteText = quotes[randomNumber].quote;
-            var newQuoteName = quotes[randomNumber].name;
-        }
-
-        var timeAnimation = 200;
-        var quoteContainer = $("#quoteContainer");
-        quoteContainer.fadeOut(timeAnimation, function() {
-            quoteContainer.html('');
-            quoteContainer.append('<p>' + newQuoteText + '</p>');
-            quoteContainer.fadeIn(timeAnimation);
-        }); //end of fadeOut
-    } //end of getQuote
-    getQuote();
-
-    $("#quoteButton").click(getQuote);
-
-}); //end of document.ready
-</script>
 
 </html>
