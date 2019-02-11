@@ -20,9 +20,19 @@ $(document).ready(function() {
         }, {
             quote: "なんぼめごこだば！ "
         }, {
-            quote: "なのどんず、<br>まのどんず　"
+            quote: "まのどんず　"
         }, {
             quote: "腹チェじゃ！"
+        }, {
+            quote: "もつけだはんで！"
+        }, {
+            quote: "あっちゃ！"
+        }, {
+            quote: "いーいーいー！"
+        }, {
+            quote: "いがめんち！"
+        }, {
+            quote: "いだわしい！"
         }, ];
 
         var sourceLength = quotes.length;
