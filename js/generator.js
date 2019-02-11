@@ -33,6 +33,8 @@ $(document).ready(function() {
             quote: "いがめんち！"
         }, {
             quote: "いだわしい！"
+        }, {
+            quote: "けっ！"
         }, ];
 
         var sourceLength = quotes.length;
