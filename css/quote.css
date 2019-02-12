@@ -20,14 +20,15 @@ body {
 }
 
 #quoteContainer {
-  display: flex;
+  display: block;
   width: 100%;
   margin: 0;
+  margin-top: 150px;
   font-size: 10vw;
   font-weight: 900;
   vertical-align: middle;
   align-items: center;
-  height: 70vh;
+  height: 50vh;
 }
 
 #quoteContainer p {
@@ -78,14 +79,15 @@ body {
 }
 
 #quoteName {
-  text-align: center;
+  font-weight: 500;
+  font-size: 2vh;
 }
 
 @media all and (max-width: 700px) {
  
 #quoteContainer {
   font-size: 10vw;
-  height: 50vh;
+  height: 40vh;
 }
     
 }
