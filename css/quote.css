@@ -86,6 +86,7 @@ body {
 @media all and (max-width: 700px) {
  
 #quoteContainer {
+  margin-top: 100px;
   font-size: 10vw;
   height: 40vh;
 }
