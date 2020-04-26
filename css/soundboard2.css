@@ -24,21 +24,18 @@ button:focus {outline:0;}
 .square-container {
   display: flex;
   flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
 }
 
 .square {
   position: relative;
-  flex-basis: calc(50% - 0px);
+  flex-basis: 50%;
   margin: 0px;
   border: 0px solid;
   box-sizing: border-box;
 }
 
-.square::before {
-  content: '';
-  display: inline-block;
-  padding-top: 100%;
-}
 
 .square .content {
   position: absolute;
