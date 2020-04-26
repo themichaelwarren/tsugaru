@@ -42,10 +42,10 @@ button:focus {outline:0;}
 
 .square .content {
   position: absolute;
-  top: 45%;
-  left: 0%;
-  height: 100%;
+  left: 50%;
+  top: 50%;
   width: 100%;
+  transform: translate(-50%, -50%);
   font-size:6vw;
   text-align: center;
 }
@@ -63,7 +63,6 @@ footer {
   flex-basis: calc(33.333% - 0px);
     }
     .square .content {
-  top: 40%;
 font-size:4vw;
 }
 
