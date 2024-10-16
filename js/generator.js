@@ -24,7 +24,7 @@ $(document).ready(function() {
             name: "あら〜！"
         }, {
             quote: "どうしちゃば！",
-            name: ""
+            name: "元気かい？"
         }, {
             quote: "なんぼめごこだば！ ",
             name: "なんて可愛い子だね！"
