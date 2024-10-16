@@ -54,7 +54,8 @@
             font-size: 20px;
             color: white;
         }
-
+        
+        /* Original background classes */
         .bg-navy { background-color: navy; }
         .bg-blue { background-color: blue; }
         .bg-aqua { background-color: aqua; color: black; }
@@ -70,7 +71,7 @@
     
 <div class="square-container">
 
-  <div class="square bg-navy" onclick="triggerAudioAndFlip(this, 'sound1', 'いがめんちだべ！')">
+  <button class="square ripple bg-navy silver" onclick="triggerAudioAndFlip(this, 'sound1', 'いがめんちだべ！')">
     <div class="flip-box-inner">
       <div class="flip-box-front">
         <div class="content">いがめんち！</div>
@@ -82,9 +83,9 @@
     <audio preload="auto" id="sound1">
       <source src="/audio/igamenchi.mp3" type="audio/mpeg">
     </audio>
-  </div>
+  </button>
 
-  <div class="square bg-blue" onclick="triggerAudioAndFlip(this, 'sound2', 'ぉんろ〜はこっちだ！')">
+  <button class="square ripple bg-blue silver" onclick="triggerAudioAndFlip(this, 'sound2', 'ぉんろ〜はこっちだ！')">
     <div class="flip-box-inner">
       <div class="flip-box-front">
         <div class="content">ぉんろ〜！</div>
@@ -96,9 +97,9 @@
     <audio preload="auto" id="sound2">
       <source src="/audio/nro.mp3" type="audio/mpeg">
     </audio>
-  </div>
+  </button>
 
-  <div class="square bg-aqua" onclick="triggerAudioAndFlip(this, 'sound3', 'どしちゃばだ！')">
+  <button class="square ripple bg-aqua black" onclick="triggerAudioAndFlip(this, 'sound3', 'どしちゃばだ！')">
     <div class="flip-box-inner">
       <div class="flip-box-front">
         <div class="content">どしちゃば！</div>
@@ -110,9 +111,9 @@
     <audio preload="auto" id="sound3">
       <source src="/audio/doshichaba.mp3" type="audio/mpeg">
     </audio>
-  </div>
+  </button>
 
-  <div class="square bg-teal" onclick="triggerAudioAndFlip(this, 'sound4', 'どんだんだばだ！')">
+  <button class="square ripple bg-teal black" onclick="triggerAudioAndFlip(this, 'sound4', 'どんだんだばだ！')">
     <div class="flip-box-inner">
       <div class="flip-box-front">
         <div class="content">どんだんだば！</div>
@@ -124,9 +125,9 @@
     <audio preload="auto" id="sound4">
       <source src="/audio/dondandaba.mp3" type="audio/mpeg">
     </audio>
-  </div>
+  </button>
 
-  <div class="square bg-olive" onclick="triggerAudioAndFlip(this, 'sound5', 'なんぼめごいばだ！')">
+  <button class="square ripple bg-olive silver" onclick="triggerAudioAndFlip(this, 'sound5', 'なんぼめごいばだ！')">
     <div class="flip-box-inner">
       <div class="flip-box-front">
         <div class="content">なんぼめごいば！</div>
@@ -138,7 +139,55 @@
     <audio preload="auto" id="sound5">
       <source src="/audio/nanbomegoiba.mp3" type="audio/mpeg">
     </audio>
-  </div>
+  </button>
+
+  <button class="square ripple bg-green navy" onclick="triggerAudioAndFlip(this, 'sound6', 'まねまねだ！')">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <div class="content">まね、まねっ！</div>
+      </div>
+      <div class="flip-box-back">
+        <div class="content">まねまねだ！</div>
+      </div>
+    </div>
+    <audio preload="auto" id="sound6">
+      <source src="/audio/manemane.mp3" type="audio/mpeg">
+    </audio>
+  </button>
+
+  <button class="square ripple bg-yellow navy" onclick="triggerAudioAndFlip(this, 'sound7', 'まんずなだ！')">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <div class="content">まんずな！</div>
+      </div>
+      <div class="flip-box-back">
+        <div class="content">まんずなだ！</div>
+      </div>
+    </div>
+    <audio preload="auto" id="sound7">
+      <source src="/audio/manzuna.mp3" type="audio/mpeg">
+    </audio>
+  </button>
+
+  <button class="square ripple bg-orange navy" onclick="triggerAudioAndFlip(this, 'sound8', '腹チェんずだ！')">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <div class="content">腹チェんず！</div>
+      </div>
+      <div class="flip-box-back">
+        <div class="content">腹チェんずだ！</div>
+      </div>
+    </div>
+    <audio preload="auto" id="sound8">
+      <source src="/audio/harachenzu.mp3" type="audio/mpeg">
+    </audio>
+  </button>
+    
+  <button class="square ripple bg-white navy">
+    <div class="content">
+        <a href="https://queenand.co" target=_blank><img style="width:100px;" src="/images/q&c-retro-logo.png"></a>
+    </div>
+  </button>
 
 </div>
 
