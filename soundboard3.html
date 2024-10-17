@@ -3,49 +3,201 @@
 <head>
     <title>津軽弁サウンドボード</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link href="css/soundboard3.css" rel="stylesheet" type="text/css" />
+    <link href="css/soundboard2.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* Flip effect CSS */
+        .square {
+            perspective: 1000px;
+        }
+        .flip-box-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .square.flipped .flip-box-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-box-front, .flip-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .flip-box-back {
+            transform: rotateY(180deg);
+        }
+
+        .content {
+            font-size: 6vw;
+            color: white;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        @media (max-width: 650px) {
+            .square .content {
+                font-size: 10vw;
+            }
+        }
+
+        @media all and (min-width: 650px) {
+            .square {
+                flex-basis: calc(33.333% - 0px);
+            }
+            .square .content {
+                font-size: 4vw;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<div class="square-container" id="square-container">
-  <!-- Squares will be dynamically inserted here -->
+<div class="square-container">
+  <!-- 1st Square -->
+  <button class="square ripple bg-navy silver" onclick="triggerAudioAndFlip(this, 'sound1', 'イカメンチ！')">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <div class="content">いがめんち！</div>
+      </div>
+      <div class="flip-box-back">
+        <div class="content">イカメンチ！</div>
+      </div>
+    </div>
+    <audio preload="auto" id="sound1">
+      <source src="/audio/igamenchi.mp3" type="audio/mpeg">
+    </audio>
+  </button>
+
+  <!-- 2nd Square -->
+  <button class="square ripple bg-blue silver" onclick="triggerAudioAndFlip(this, 'sound2', 'あら〜！')">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <div class="content">ぉんろ〜！</div>
+      </div>
+      <div class="flip-box-back">
+        <div class="content">あら〜！</div>
+      </div>
+    </div>
+    <audio preload="auto" id="sound2">
+      <source src="/audio/nro.mp3" type="audio/mpeg">
+    </audio>
+  </button>
+
+  <!-- 3rd Square -->
+  <button class="square ripple bg-aqua black" onclick="triggerAudioAndFlip(this, 'sound3', '元気かい？')">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <div class="content">どしちゃば！</div>
+      </div>
+      <div class="flip-box-back">
+        <div class="content">元気かい？</div>
+      </div>
+    </div>
+    <audio preload="auto" id="sound3">
+      <source src="/audio/doshichaba.mp3" type="audio/mpeg">
+    </audio>
+  </button>
+
+  <!-- 4th Square -->
+  <button class="square ripple bg-teal black" onclick="triggerAudioAndFlip(this, 'sound4', 'なんてことだ！')">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <div class="content">どんだんだば！</div>
+      </div>
+      <div class="flip-box-back">
+        <div class="content">なんてことだ！</div>
+      </div>
+    </div>
+    <audio preload="auto" id="sound4">
+      <source src="/audio/dondandaba.mp3" type="audio/mpeg">
+    </audio>
+  </button>
+
+  <!-- 5th Square -->
+  <button class="square ripple bg-olive silver" onclick="triggerAudioAndFlip(this, 'sound5', 'なんて可愛いんだ！')">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <div class="content">なんぼめごいば！</div>
+      </div>
+      <div class="flip-box-back">
+        <div class="content">なんて可愛いんだ！</div>
+      </div>
+    </div>
+    <audio preload="auto" id="sound5">
+      <source src="/audio/nanbomegoiba.mp3" type="audio/mpeg">
+    </audio>
+  </button>
+
+  <!-- 6th Square -->
+  <button class="square ripple bg-green navy" onclick="triggerAudioAndFlip(this, 'sound6', 'ダメ、ダメ！')">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <div class="content">まね、まねっ！</div>
+      </div>
+      <div class="flip-box-back">
+        <div class="content">ダメ、ダメ！</div>
+      </div>
+    </div>
+    <audio preload="auto" id="sound6">
+      <source src="/audio/manemane.mp3" type="audio/mpeg">
+    </audio>
+  </button>
+
+  <!-- 7th Square -->
+  <button class="square ripple bg-yellow navy" onclick="triggerAudioAndFlip(this, 'sound7', 'そうだよね！')">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <div class="content">まんずな！</div>
+      </div>
+      <div class="flip-box-back">
+        <div class="content">そうだよね！</div>
+      </div>
+    </div>
+    <audio preload="auto" id="sound7">
+      <source src="/audio/manzuna.mp3" type="audio/mpeg">
+    </audio>
+  </button>
+
+  <!-- 8th Square -->
+  <button class="square ripple bg-orange navy" onclick="triggerAudioAndFlip(this, 'sound8', 'お腹いっぱい！')">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <div class="content">腹チェんず！</div>
+      </div>
+      <div class="flip-box-back">
+        <div class="content">お腹いっぱい！</div>
+      </div>
+    </div>
+    <audio preload="auto" id="sound8">
+      <source src="/audio/harachenzu.mp3" type="audio/mpeg">
+    </audio>
+  </button>
+
+  <!-- 9th Square (Link to Queen & Co.) -->
+  <button class="square ripple bg-white navy">
+    <div class="content">
+      <a href="https://queenand.co" target="_blank" style="color: black; text-decoration: none;">
+        <img style="width:100px;" src="/images/q&c-retro-logo.png" alt="Queen & Co">
+      </a>
+    </div>
+  </button>
 </div>
 
 <script>
-  // Fetch the data from the JSON file
-  fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-      const container = document.getElementById('square-container');
-      data.squares.forEach((square, index) => {
-        // Create the button element with the flip and audio functionality
-        const button = document.createElement('button');
-        button.className = `square ripple ${square.colorClass}`;
-        button.setAttribute('onclick', `triggerAudioAndFlip(this, 'sound${index + 1}', '${square.textBack}')`);
-
-        // Create the inner structure for flip effect
-        const inner = `
-          <div class="flip-box-inner">
-            <div class="flip-box-front">
-              <div class="content">${square.textFront}</div>
-            </div>
-            <div class="flip-box-back">
-              <div class="content">${square.textBack}</div>
-            </div>
-          </div>
-          <audio preload="auto" id="sound${index + 1}">
-            <source src="${square.audio}" type="audio/mpeg">
-          </audio>
-        `;
-        button.innerHTML = inner;
-
-        // Append the button to the container
-        container.appendChild(button);
-      });
-    });
-
   function triggerAudioAndFlip(element, audioId, backText) {
     const flipBoxInner = element.querySelector('.flip-box-inner');
     const backContent = element.querySelector('.flip-box-back .content');
