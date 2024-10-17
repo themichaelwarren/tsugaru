@@ -1,28 +1,6 @@
 <!doctype html>
 <html lang="en">
 
-<!--
-                       #                                        # #                                   
-                       #             #                          # #   #       #             ##        
-   ##########         ##             #                                #       #             ##        
-                      #             ##   #######         #######     ##       #             ##        
-                     ##             #                 ####      #    #   ##########         ##        
-                     #              #               ###          #   #        #             ##        
-                     #              #                            #   #        #             #         
-                    ## ###          #                            #   #        #             #         
-                    # #   #         #                            #   #        #             #         
-                    ##    #         #                           ##   #        #             #         
-  #                ##     #         #   #                      ##    #    #####                       
-  ##               #      #    #    #   #                    ###     #   #    ###                     
-   ###             #      #   ##    # # ##                 ###       # # #    # ##          ##        
-     #########    ##      #  ##     ##   ########                    ##  #   ##  ##         ##        
-                  #        ###       #                                #   ####                        
-                                                                                                      
-
-This site brought to you by Queen & Co.
-Feel free to get in touch: info@queenand.co
--->
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,16 +18,16 @@ Feel free to get in touch: info@queenand.co
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column; /* Stack items vertically */
             height: 100vh; /* Full viewport height */
         }
 
         .center-div {
-            height: 250px; /* Fixed height */
             display: flex;
             justify-content: center;
-          flex-direction: column;
             align-items: center;
             text-align: center;
+            margin-bottom: 20px; /* Space between image and button */
         }
 
         img {
@@ -58,7 +36,6 @@ Feel free to get in touch: info@queenand.co
         }
 
         #buttonContainer {
-            margin-top: 20px; /* Spacing below the image */
             text-align: center;
         }
 
@@ -94,10 +71,12 @@ Feel free to get in touch: info@queenand.co
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
 
+    <!-- Centered Image -->
     <div class="center-div">
         <img draggable="false" src="images/konniduha.png" alt="Centered Image">
     </div>
 
+    <!-- Button and Counter -->
     <div id="buttonContainer">
         <a href="#" id="quoteButton">押さなが！</a>
         <p>
@@ -108,6 +87,7 @@ Feel free to get in touch: info@queenand.co
             <!-- End of CuterCounter Code -->
         </p>
     </div>
+
 </body>
 
 </html>
