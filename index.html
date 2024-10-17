@@ -1,9 +1,7 @@
-
 <!doctype html>
-<html>
+<html lang="en">
 
 <!--
-
                        #                                        # #                                   
                        #             #                          # #   #       #             ##        
    ##########         ##             #                                #       #             ##        
@@ -21,30 +19,95 @@
                   #        ###       #                                #   ####                        
                                                                                                       
 
-This site brought to you be Queen & Co.
+This site brought to you by Queen & Co.
 Feel free to get in touch: info@queenand.co
-
 -->
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>津軽弁ドットコム</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f5f5f5;
+            overflow: hidden;
+        }
+
+        .center-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            width: 80%; /* Adjust as needed */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #buttonContainer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #quoteButton {
+            display: inline-block;
+            background-color: #47a7f5;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        #quoteButton:hover {
+            background-color: #0066cc;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        a img {
+            max-width: 100px;
+        }
+    </style>
 </head>
 
 <body>
-<script>
-document.addEventListener('contextmenu', event => event.preventDefault());
-</script>
-<div class="center-div"><img draggable="false" src="images/konniduha.png" style=width:100%></div>
-          <div id="buttonContainer">
-            <a href="#" id="quoteButton">押さなが！</a>
-            <p>
-                <!-- Start of CuterCounter Code -->
-                <a href="https://www.cutercounter.com/" target="_blank"><img src="https://www.cutercounter.com/hits.php?id=humxqxocp&nd=6&style=22" border="0" alt="best free website hit counter"></a>
-                <!-- End of CuterCounter Code -->
-        </div>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+
+    <div class="center-div">
+        <img draggable="false" src="images/konniduha.png" alt="Centered Image">
+    </div>
+
+    <div id="buttonContainer">
+        <a href="#" id="quoteButton">押さなが！</a>
+        <p>
+            <!-- Start of CuterCounter Code -->
+            <a href="https://www.cutercounter.com/" target="_blank">
+                <img src="https://www.cutercounter.com/hits.php?id=humxqxocp&nd=6&style=22" border="0" alt="best free website hit counter">
+            </a>
+            <!-- End of CuterCounter Code -->
+        </p>
+    </div>
 </body>
+
+</html>
