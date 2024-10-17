@@ -3,7 +3,7 @@
 body {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 900;
-  margin: 0; /* No margin to avoid overflow */
+  margin: 0;
   overflow: hidden; /* Prevent body scrolling */
 }
 
@@ -38,32 +38,56 @@ button:focus {
 .square {
   position: relative;
   flex-basis: 50%; /* Two squares per row on mobile */
-  margin: 0px; /* No margins between squares */
-  border: 0px solid;
+  margin: 0; /* No margins between squares */
+  border: 0;
   box-sizing: border-box;
   height: auto; /* Height will adjust automatically */
+  perspective: 1000px; /* For flip effect */
+}
+
+/* Flip effect */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.square.flipped .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.flip-box-back {
+  transform: rotateY(180deg);
 }
 
 .square .content {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 90%; /* Ensure content stays within the square */
+  width: 100%; /* Ensure content stays within the square */
   transform: translate(-50%, -50%);
-  font-size: 6vw; /* Dynamic font size */
+  font-size: 5vw; /* Fine-tune font size for smaller screens */
   font-weight: 900; /* Bold font */
   text-align: center;
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide overflowing text */
   text-overflow: ellipsis; /* Add ellipsis if text overflows */
-}
-
-/* Footer style */
-footer {
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  margin: 2em 0;
+  color: white;
 }
 
 /* Adjustments for larger screens */
