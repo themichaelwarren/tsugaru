@@ -88,7 +88,6 @@ button:focus {
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide overflowing text */
   text-overflow: ellipsis; /* Add ellipsis if text overflows */
-  color: white;
 }
 
 /* Adjustments for larger screens */
