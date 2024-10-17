@@ -1,27 +1,6 @@
 <!doctype html>
 <html lang="ja">
 
-<!--
-                       #                                        # #                                   
-                       #             #                          # #   #       #             ##        
-   ##########         ##             #                                #       #             ##        
-                      #             ##   #######         #######     ##       #             ##        
-                     ##             #                 ####      #    #   ##########         ##        
-                     #              #               ###          #   #        #             ##        
-                     #              #                            #   #        #             #         
-                    ## ###          #                            #   #        #             #         
-                    # #   #         #                            #   #        #             #         
-                    ##    #         #                           ##   #        #             #         
-  #                ##     #         #   #                      ##    #    #####                       
-  ##               #      #    #    #   #                    ###     #   #    ###                     
-   ###             #      #   ##    # # ##                 ###       # # #    # ##          ##        
-     #########    ##      #  ##     ##   ########                    ##  #   ##  ##         ##        
-                  #        ###       #                                #   ####                        
-                                                                                                      
-
-This site brought to you by Queen & Co.
-Feel free to get in touch: info@queenand.co
--->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +16,7 @@ Feel free to get in touch: info@queenand.co
     <meta property="og:site_name" content="津軽弁ドットコム">
     <meta name="twitter:image:alt" content="こんにづは！">
     <script>
-        // First we get the viewport height and we multiply it by 1% to get a value for a vh unit
+        // Get viewport height and set custom --vh property
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
 
@@ -55,18 +34,20 @@ Feel free to get in touch: info@queenand.co
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Stack items from top */
-            align-items: center;    /* Center items horizontally */
-            height: 100vh;          /* Full viewport height */
+            justify-content: center;  /* Center vertically */
+            align-items: center;      /* Center horizontally */
+            height: 100vh;            /* Full viewport height */
         }
 
         .center-div {
+            display: flex;
+            flex-direction: column; /* Stack image, button, and counter vertically */
+            justify-content: center;
+            align-items: center;
             text-align: center;
             width: 80%; /* Adjust as needed */
-            margin-bottom: 20px; /* Add space below the image */
-            min-height: 200px;   /* Ensure the image container has enough height */
-          position: unset;
-          margin: 15%;
+            margin-bottom: 20px;
+            min-height: 200px;  /* Ensure the container has enough height */
         }
 
         img {
@@ -111,23 +92,21 @@ Feel free to get in touch: info@queenand.co
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
 
-    <!-- Centered Image -->
+    <!-- Centered Image, Button, and Counter -->
     <div class="center-div">
         <img draggable="false" src="images/konniduha.png" alt="Centered Image">
-    
-
-    <!-- Button and Counter -->
-    <div id="buttonContainer">
-        <a href="#" id="quoteButton">押さなが！</a>
-        <p>
-            <!-- Start of CuterCounter Code -->
-            <a href="https://www.cutercounter.com/" target="_blank">
-                <img src="https://www.cutercounter.com/hits.php?id=humxqxocp&nd=6&style=22" border="0" alt="best free website hit counter">
-            </a>
-            <!-- End of CuterCounter Code -->
-        </p>
+        <!-- Button and Counter -->
+        <div id="buttonContainer">
+            <a href="#" id="quoteButton">押さなが！</a>
+            <p>
+                <!-- Start of CuterCounter Code -->
+                <a href="https://www.cutercounter.com/" target="_blank">
+                    <img src="https://www.cutercounter.com/hits.php?id=humxqxocp&nd=6&style=22" border="0" alt="best free website hit counter">
+                </a>
+                <!-- End of CuterCounter Code -->
+            </p>
+        </div>
     </div>
-      </div>
 
 </body>
 
