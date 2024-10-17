@@ -98,6 +98,6 @@ button:focus {
   }
 
   .square .content {
-    font-size: 4vw; /* Fine-tune font size for larger screens */
+    font-size: 3.5vw; /* Fine-tune font size for larger screens */
   }
 }
