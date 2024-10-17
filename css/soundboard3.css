@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,500,700,900&subset=japanese');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded 1c:400,500,700,900&subset=japanese');
 
 body {
   font-family: "M PLUS Rounded 1c", sans-serif;
@@ -32,7 +32,7 @@ button:focus {
   flex-wrap: wrap;
   width: 100vw;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  height: calc(var(--vh, 1vh) * 100); /* Ensure it fills the full viewport height */
 }
 
 .square {
@@ -82,22 +82,8 @@ button:focus {
   width: 100%; /* Ensure content stays within the square */
   transform: translate(-50%, -50%);
   font-family: "M PLUS Rounded 1c", sans-serif;
-  font-size: 5vw; /* Fine-tune font size for smaller screens */
+  font-size: 5vw; /* Font size for mobile */
   font-weight: 900; /* Bold font */
   text-align: center;
   white-space: nowrap; /* Prevent text from wrapping */
-  overflow: hidden; /* Hide overflowing text */
-  text-overflow: ellipsis; /* Add ellipsis if text overflows */
-}
-
-/* Adjustments for larger screens */
-@media all and (min-width: 650px) {
-  .square {
-    flex-basis: calc(33.333% - 0px); /* Three squares per row */
-    height: calc(33.333vh); /* Adjust height to maintain full screen without scrolling */
-  }
-
-  .square .content {
-    font-size: 3.5vw; /* Fine-tune font size for larger screens */
-  }
-}
+  overflow:​⬤
