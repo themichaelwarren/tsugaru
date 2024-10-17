@@ -28,6 +28,8 @@ button:focus {
 .square-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around; /* Ensure spacing between squares */
+  align-items: stretch; /* Make squares fill the available vertical space */
   width: 100vw;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
@@ -35,8 +37,9 @@ button:focus {
 
 .square {
   position: relative;
-  flex-basis: 50%;
-  margin: 0px;
+  flex-basis: 33.333%; /* Each square takes up one-third of the width */
+  height: 33.333vh; /* Each square takes up one-third of the height */
+  margin: 10px;
   border: 0px solid;
   box-sizing: border-box;
   perspective: 1000px; /* Flip effect */
@@ -46,13 +49,13 @@ button:focus {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 100%;
+  width: 90%; /* Ensure content stays within the square */
   transform: translate(-50%, -50%);
-  font-size: 6vw; /* Responsive font size */
+  font-size: 4vw; /* Font size based on viewport width */
   text-align: center;
-  white-space: nowrap; /* Prevent wrapping */
+  white-space: nowrap; /* Prevent text wrapping */
   overflow: hidden; /* Hide overflowing text */
-  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
 }
 
 .flip-box-inner {
@@ -92,20 +95,26 @@ footer {
   margin: 2em 0;
 }
 
-/* Adjust for mobile screens */
+/* Mobile-specific adjustments */
 @media (max-width: 650px) {
+  .square {
+    flex-basis: 50%; /* Two squares per row on mobile */
+    height: 50vh; /* Half the viewport height per square */
+  }
+
   .square .content {
-    font-size: 10vw; /* Increase font size for mobile */
+    font-size: 6vw; /* Larger font size for mobile */
   }
 }
 
-/* Adjust for larger screens */
-@media all and (min-width: 650px) {
+/* Adjustments for larger screens */
+@media (min-width: 651px) {
   .square {
-    flex-basis: calc(33.333% - 0px);
+    flex-basis: calc(33.333% - 20px); /* Three squares per row */
+    height: calc(33.333vh - 20px); /* Adjust height */
   }
 
   .square .content {
-    font-size: 4vw; /* Fine-tune font size for larger screens */
+    font-size: 3.5vw; /* Adjust font size for larger screens */
   }
 }
