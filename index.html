@@ -1,6 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 
+<!--
+                       #                                        # #                                   
+                       #             #                          # #   #       #             ##        
+   ##########         ##             #                                #       #             ##        
+                      #             ##   #######         #######     ##       #             ##        
+                     ##             #                 ####      #    #   ##########         ##        
+                     #              #               ###          #   #        #             ##        
+                     #              #                            #   #        #             #         
+                    ## ###          #                            #   #        #             #         
+                    # #   #         #                            #   #        #             #         
+                    ##    #         #                           ##   #        #             #         
+  #                ##     #         #   #                      ##    #    #####                       
+  ##               #      #    #    #   #                    ###     #   #    ###                     
+   ###             #      #   ##    # # ##                 ###       # # #    # ##          ##        
+     #########    ##      #  ##     ##   ########                    ##  #   ##  ##         ##        
+                  #        ###       #                                #   ####                        
+                                                                                                      
+
+This site brought to you by Queen & Co.
+Feel free to get in touch: info@queenand.co
+-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +29,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>津軽弁ドットコム</title>
+    <meta property="og:title" content="津軽弁ドットコム">
+    <meta property="og:description" content="津軽弁ドットコム！">
+    <meta property="og:image" content="https://tsugaruben.com/images/konniduha.png">
+    <meta property="og:url" content="https://tsugaruben.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="津軽弁ドットコム">
+    <meta name="twitter:image:alt" content="こんにづは！">
+    <script>
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+        // We listen to the resize event
+        window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
+    </script>
     <style>
         body {
             background-color: white;
@@ -16,18 +57,16 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column; /* Stack items vertically */
-            height: 100vh; /* Full viewport height */
+            flex-direction: column;
+            align-items: center; /* Align items to the center horizontally */
+            height: 100vh;
+            justify-content: flex-start; /* Start stacking from the top */
         }
 
         .center-div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            margin-bottom: 20px; /* Space between image and button */
+            width: 80%; /* Adjust as needed */
+            margin-bottom: 20px; /* Add space below the image */
         }
 
         img {
@@ -78,7 +117,7 @@
 
     <!-- Button and Counter -->
     <div id="buttonContainer">
-        <a href="#" id="quoteButton">押さなが！</a>
+        <a href="index2" id="quoteButton">押さなが！</a>
         <p>
             <!-- Start of CuterCounter Code -->
             <a href="https://www.cutercounter.com/" target="_blank">
