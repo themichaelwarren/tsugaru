@@ -87,3 +87,42 @@ button:focus {
   text-align: center;
   white-space: nowrap; /* Prevent text from wrapping */
   overflow:​⬤
+
+
+/* Ripple effect, other styles, etc... */
+
+.square-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100); /* Ensure it fills the full viewport height */
+}
+
+.square {
+  position: relative;
+  flex-basis: 50%; /* Two squares per row on mobile */
+  margin: 0; /* No margins between squares */
+  border: 0;
+  box-sizing: border-box;
+  height: auto; /* Height will adjust automatically */
+  perspective: 1000px; /* For flip effect */
+}
+
+/* On mobile, make the 9th square span the full width */
+@media (max-width: 650px) {
+  .square:nth-child(9) {
+    flex-basis: 100%; /* Make the 9th square span the full width */
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+  }
+}
+
+/* Adjustments for larger screens */
+@media all and (min-width: 650px) {
+  .square {
+    flex-basis: calc(33.333% - 0px); /* Three squares per row */
+    height: calc(33.333vh); /* Adjust height to maintain full screen without scrolling */
+  }
+}
