@@ -3,7 +3,7 @@
 body {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 900;
-  margin: 0; /* Ensure no margins create overflow */
+  margin: 0; /* No margin to avoid overflow */
   overflow: hidden; /* Prevent body scrolling */
 }
 
@@ -32,7 +32,7 @@ button:focus {
   flex-wrap: wrap;
   width: 100vw;
   height: 100vh; /* Ensure the container fills the entire viewport */
-  height: calc(var(--vh, 1vh) * 100); /* Adjust based on actual viewport height */
+  height: calc(var(--vh, 1vh) * 100); /* Adjust based on the actual viewport height */
 }
 
 .square {
@@ -41,7 +41,7 @@ button:focus {
   margin: 0px; /* No margins between squares */
   border: 0px solid;
   box-sizing: border-box;
-  height: 50vh; /* Each square takes up half the viewport height */
+  height: auto; /* Height will adjust automatically */
 }
 
 .square .content {
@@ -50,10 +50,10 @@ button:focus {
   top: 50%;
   width: 90%; /* Ensure content stays within the square */
   transform: translate(-50%, -50%);
-  font-size: 6vw; /* Dynamically adjust font size */
-  font-weight: 900; /* Use bold font */
+  font-size: 6vw; /* Dynamic font size */
+  font-weight: 900; /* Bold font */
   text-align: center;
-  white-space: nowrap; /* Prevent wrapping */
+  white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide overflowing text */
   text-overflow: ellipsis; /* Add ellipsis if text overflows */
 }
@@ -70,10 +70,10 @@ footer {
 @media all and (min-width: 650px) {
   .square {
     flex-basis: calc(33.333% - 0px); /* Three squares per row */
-    height: calc(33.333vh); /* Adjust height to keep page height consistent */
+    height: calc(33.333vh); /* Adjust height to maintain full screen without scrolling */
   }
 
   .square .content {
-    font-size: 4vw; /* Adjust font size for larger screens */
+    font-size: 4vw; /* Fine-tune font size for larger screens */
   }
 }
