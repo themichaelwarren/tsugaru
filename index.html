@@ -32,21 +32,24 @@ Feel free to get in touch: info@queenand.co
     <title>津軽弁ドットコム</title>
     <style>
         body {
-            background-color: white; /* Set background to white */
+            background-color: white;
             font-family: "M PLUS Rounded 1c", sans-serif;
             font-weight: 900;
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100vh; /* Full viewport height */
         }
 
         .center-div {
+            height: 250px; /* Fixed height */
+            display: flex;
+            justify-content: center;
+          flex-direction: column;
+            align-items: center;
             text-align: center;
-            width: 80%; /* Adjust as needed */
-            margin-bottom: 20px; /* Spacing below the image */
         }
 
         img {
@@ -55,7 +58,7 @@ Feel free to get in touch: info@queenand.co
         }
 
         #buttonContainer {
-            margin-bottom: 20px; /* Spacing below the button */
+            margin-top: 20px; /* Spacing below the image */
             text-align: center;
         }
 
