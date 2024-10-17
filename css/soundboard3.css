@@ -86,27 +86,8 @@ button:focus {
   font-weight: 900; /* Bold font */
   text-align: center;
   white-space: nowrap; /* Prevent text from wrapping */
-  overflow:​⬤
-
-
-/* Ripple effect, other styles, etc... */
-
-.square-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100vw;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100); /* Ensure it fills the full viewport height */
-}
-
-.square {
-  position: relative;
-  flex-basis: 50%; /* Two squares per row on mobile */
-  margin: 0; /* No margins between squares */
-  border: 0;
-  box-sizing: border-box;
-  height: auto; /* Height will adjust automatically */
-  perspective: 1000px; /* For flip effect */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
 }
 
 /* On mobile, make the 9th square span the full width */
@@ -120,9 +101,13 @@ button:focus {
 }
 
 /* Adjustments for larger screens */
-@media all and (min-width: 650px) {
+@media all and (min-width: 768px) { /* Updated from 650px to 768px */
   .square {
     flex-basis: calc(33.333% - 0px); /* Three squares per row */
     height: calc(33.333vh); /* Adjust height to maintain full screen without scrolling */
+  }
+
+  .square .content {
+    font-size: 3.5vw; /* Adjust font size for larger screens */
   }
 }
