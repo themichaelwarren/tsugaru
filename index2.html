@@ -1,0 +1,137 @@
+<!doctype html>
+<!--
+
+                       #                                        # #                                   
+                       #             #                          # #   #       #             ##        
+   ##########         ##             #                                #       #             ##        
+                      #             ##   #######         #######     ##       #             ##        
+                     ##             #                 ####      #    #   ##########         ##        
+                     #              #               ###          #   #        #             ##        
+                     #              #                            #   #        #             #         
+                    ## ###          #                            #   #        #             #         
+                    # #   #         #                            #   #        #             #         
+                    ##    #         #                           ##   #        #             #         
+  #                ##     #         #   #                      ##    #    #####                       
+  ##               #      #    #    #   #                    ###     #   #    ###                     
+   ###             #      #   ##    # # ##                 ###       # # #    # ##          ##        
+     #########    ##      #  ##     ##   ########                    ##  #   ##  ##         ##        
+                  #        ###       #                                #   ####                        
+                                                                                                      
+
+This site brought to you be Queen & Co.
+Feel free to get in touch: info@queenand.co
+
+-->
+<html lang="ja">
+    <head>
+    <title>津軽弁サウンドボード</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">
+    <meta property="og:title" content="津軽弁サウンドボード">
+    <meta property="og:description" content="押さなが！">
+    <meta property="og:image" content="https://tsugaruben.com/images/waiha.png">
+    <meta property="og:url" content="https://tsugaruben.com/soundboard">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="津軽弁サウンドボード">
+    <meta name="twitter:image:alt" content="わいは！">
+    <script>
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+        // We listen to the resize event
+        window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,500,700,900&subset=japanese');
+        
+        body {
+            font-family: "M PLUS Rounded 1c", sans-serif;
+            font-weight: 900;
+            margin: 0;
+            overflow: hidden; /* Prevent body scrolling */
+        }
+
+        .square-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100vw;
+            height: 100vh; /* Fill the full height of the viewport */
+            height: calc(var(--vh, 1vh) * 100); /* Adjust based on the actual viewport height */
+        }
+
+        .square {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            margin: 0; /* No margin between squares */
+            flex-basis: 50%; /* Two squares per row */
+            height: 50%; /* Each square takes up half the height of the viewport */
+        }
+
+        .square.logo {
+            background-color: white;
+        }
+
+        .square.link {
+            background-color: lightblue;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .square.logo img {
+            width: 100px;
+        }
+
+        .square .content {
+            font-size: 5vw; /* Font size relative to viewport width */
+            font-weight: 900;
+            text-align: center;
+            color: white;
+        }
+
+        /* Adjustments for larger screens */
+        @media all and (min-width: 650px) {
+            .square .content {
+                font-size: 4vw; /* Adjust font size for larger screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="square-container">
+    <!-- 1st Square (Link to /generator) -->
+    <div class="square bg-olive silver" onclick="window.location.href='/generator'">
+        <div class="content">Generator</div>
+    </div>
+
+    <!-- 2nd Square (Link to /soundboard) -->
+    <div class="square bg-yellow navy" onclick="window.location.href='/soundboard'">
+        <div class="content">Soundboard</div>
+    </div>
+
+    <!-- 3rd Square (Link to /search) -->
+    <div class="square bg-blue silver" onclick="window.location.href='/search'">
+        <div class="content">Search</div>
+    </div>
+
+    <!-- 4th Square (Logo) -->
+    <div class="square logo bg-white">
+        <a href="/">
+            <img src="/images/q&c-retro-logo.png" alt="Logo">
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
