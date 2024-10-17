@@ -1,0 +1,52 @@
+{
+  "squares": [
+    {
+      "textFront": "いがめんち！",
+      "textBack": "イカメンチ！",
+      "audio": "/audio/igamenchi.mp3",
+      "colorClass": "bg-navy silver"
+    },
+    {
+      "textFront": "ぉんろ〜！",
+      "textBack": "あら〜！",
+      "audio": "/audio/nro.mp3",
+      "colorClass": "bg-blue silver"
+    },
+    {
+      "textFront": "どしちゃば！",
+      "textBack": "元気かい？",
+      "audio": "/audio/doshichaba.mp3",
+      "colorClass": "bg-aqua black"
+    },
+    {
+      "textFront": "どんだんだば！",
+      "textBack": "なんてことだ！",
+      "audio": "/audio/dondandaba.mp3",
+      "colorClass": "bg-teal black"
+    },
+    {
+      "textFront": "なんぼめごいば！",
+      "textBack": "なんて可愛いんだ！",
+      "audio": "/audio/nanbomegoiba.mp3",
+      "colorClass": "bg-olive silver"
+    },
+    {
+      "textFront": "まね、まねっ！",
+      "textBack": "ダメ、ダメ！",
+      "audio": "/audio/manemane.mp3",
+      "colorClass": "bg-green navy"
+    },
+    {
+      "textFront": "まんずな！",
+      "textBack": "そうだよね！",
+      "audio": "/audio/manzuna.mp3",
+      "colorClass": "bg-yellow navy"
+    },
+    {
+      "textFront": "腹チェんず！",
+      "textBack": "お腹いっぱい！",
+      "audio": "/audio/harachenzu.mp3",
+      "colorClass": "bg-orange navy"
+    }
+  ]
+}
