@@ -74,7 +74,7 @@ Feel free to get in touch: info@queenand.co
             align-items: center;
             box-sizing: border-box;
             margin: 0; /* No margin between squares */
-            flex-basis: 50%; /* Two squares per row */
+            flex-basis: 50%; /* Two squares per row on larger screens */
             height: 50%; /* Each square takes up half the height of the viewport */
         }
 
@@ -99,8 +99,20 @@ Feel free to get in touch: info@queenand.co
             color: white;
         }
 
+        /* Stacking squares vertically on smaller screens */
+        @media (max-width: 650px) {
+            .square {
+                flex-basis: 100%; /* Full width for each square */
+                height: 25%; /* Each square takes up a quarter of the viewport height */
+            }
+
+            .square .content {
+                font-size: 7vw; /* Adjust font size for mobile */
+            }
+        }
+
         /* Adjustments for larger screens */
-        @media all and (min-width: 650px) {
+        @media all and (min-width: 651px) {
             .square .content {
                 font-size: 4vw; /* Adjust font size for larger screens */
             }
