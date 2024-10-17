@@ -103,7 +103,7 @@ footer {
   }
 
   .square .content {
-    font-size: 6vw; /* Larger font size for mobile */
+    font-size: 3.5vw; /* Larger font size for mobile */
   }
 }
 
@@ -115,6 +115,6 @@ footer {
   }
 
   .square .content {
-    font-size: 3.5vw; /* Adjust font size for larger screens */
+    font-size: 5.5vw; /* Adjust font size for larger screens */
   }
 }
