@@ -45,26 +45,38 @@ button:focus {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 100%;
+  width: 90%; /* Ensure content stays within the square */
   transform: translate(-50%, -50%);
-  font-size: 6vw;
+  font-size: 6vw; /* Start with a dynamic font size based on viewport width */
+  font-weight: 900; /* Ensure the font is bold and thick */
   text-align: center;
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
 }
 
-footer {
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  margin: 2em 0;
+/* Mobile-specific adjustments */
+@media (max-width: 650px) {
+  .square {
+    flex-basis: 50%; /* Two squares per row on mobile */
+    height: 50vh; /* Make squares taller to fit the screen */
+  }
+
+  .square .content {
+    font-size: 5vw; /* Adjust font size for mobile */
+    white-space: nowrap; /* Ensure no wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
-/* Adjustments for larger screens */
-@media all and (min-width: 650px) {
+/* Larger screen adjustments */
+@media (min-width: 651px) {
   .square {
     flex-basis: calc(33.333% - 0px); /* Three squares per row */
   }
 
   .square .content {
-    font-size: 4vw; /* Adjust font size for larger screens */
+    font-size: 4vw; /* Fine-tune font size for larger screens */
   }
 }
