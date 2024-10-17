@@ -81,6 +81,7 @@ button:focus {
   top: 50%;
   width: 100%; /* Ensure content stays within the square */
   transform: translate(-50%, -50%);
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 5vw; /* Fine-tune font size for smaller screens */
   font-weight: 900; /* Bold font */
   text-align: center;
